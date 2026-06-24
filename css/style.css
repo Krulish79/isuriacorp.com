@@ -50,8 +50,11 @@ body{
   overflow-x: hidden;
 }
 
+/* Never hyphenate, anywhere. */
+*, *::before, *::after{ -webkit-hyphens: none !important; hyphens: none !important; }
+
 /* Justify body copy; labels & structural type stay flush-left. */
-p{ text-align: justify; text-justify: inter-word; text-wrap: pretty; hyphens: auto; }
+p{ text-align: justify; text-justify: inter-word; text-wrap: pretty; }
 .eyebrow, .vertical-tag, .hero-eyebrow, .footer-sub, .footer-bottom,
 .scroll-link, address, .form-status, .attr, .facts, .hi-label, .tenet-num{
   text-align: left; hyphens: manual;
