@@ -245,8 +245,8 @@ em{ color: var(--red); }
 .hero-index{
   list-style: none; margin: clamp(3rem, 6vw, 4.5rem) 0 0; padding: 2rem 0 0;
   border-top: 1px solid var(--on-dark-line);
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-  max-width: 760px;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem;
+  max-width: 940px;
 }
 .hero-index li{ display: grid; row-gap: .55rem; }
 .hi-num{ font-family: var(--serif); font-size: 1.05rem; color: var(--red-bright); letter-spacing: .05em; }
@@ -321,6 +321,17 @@ em{ color: var(--red); }
   background: var(--ink); border: 1px solid var(--ink-2);
 }
 .art::before, .art::after{ content:""; position: absolute; inset: 0; }
+.art--offshore::before{
+  background:
+    repeating-linear-gradient(0deg, transparent 0 13%, rgba(255,255,255,.05) 13% 13.5%),
+    radial-gradient(120% 90% at 50% 120%, rgba(194,14,46,.5), transparent 58%);
+}
+.art--offshore::after{
+  background:
+    radial-gradient(140% 60% at 50% 18%, transparent 64%, rgba(255,255,255,.08) 65%),
+    linear-gradient(180deg, transparent 38%, rgba(225,29,50,.85) 38.4%, transparent 39.6%);
+  transform: scaleY(1.04);
+}
 .art--energy::before{
   background:
     repeating-linear-gradient(90deg, transparent 0 11.5%, rgba(255,255,255,.05) 11.5% 12%),
@@ -428,6 +439,7 @@ em{ color: var(--red); }
   .group-grid, .contact-grid{ grid-template-columns: 1fr; }
   .tenets{ grid-template-columns: repeat(2, 1fr); gap: 2.5rem 2rem; }
   .footer-grid{ grid-template-columns: 1fr 1fr; }
+  .hero-index{ grid-template-columns: repeat(3, 1fr); gap: 1.4rem 1.2rem; }
 }
 @media (max-width: 680px){
   .vertical, .vertical.reverse .vertical-media{ grid-template-columns: 1fr; }
