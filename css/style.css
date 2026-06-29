@@ -371,24 +371,31 @@ em{ color: var(--red); }
   background: linear-gradient(180deg, transparent 72%, rgba(255,255,255,.08) 72.5%);
 }
 
-/* Operating-company logo, centered on the dark art plate.
-   Provide light/white versions (PNG or SVG) — they sit on near-black. */
+/* Operating-company logo on a clean white card, floated on the dark art plate —
+   so logos read in their true colours (several are black artwork). */
 .logo-plate{
-  position: absolute; inset: 0; z-index: 2;
-  display: flex; align-items: center; justify-content: center;
-  gap: clamp(1.1rem, 3vw, 2.2rem); flex-wrap: wrap;
-  padding: clamp(1.6rem, 5vw, 3rem);
-  background: radial-gradient(62% 62% at 50% 50%, rgba(5,5,6,.5), transparent 78%);
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  z-index: 2;
+  width: min(72%, 300px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: clamp(1rem, 2.6vw, 1.6rem);
+  padding: clamp(1.7rem, 4.5vw, 2.6rem);
+  background: var(--white);
+  border-radius: 2px;
+  box-shadow: 0 28px 64px -30px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.25);
+}
+.logo-plate::before{ /* hairline red accent at the top edge */
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--red);
 }
 .brand-logo{
-  max-height: clamp(46px, 8.5vw, 78px);
-  max-width: 64%;
-  width: auto; object-fit: contain;
+  max-width: 100%;
+  max-height: clamp(52px, 8.5vw, 76px);
+  width: auto; height: auto; object-fit: contain; display: block;
 }
-.logo-plate--trio{ flex-direction: column; gap: clamp(.9rem, 2.6vw, 1.7rem); }
-.logo-plate--trio .brand-logo{ max-height: clamp(26px, 4.6vw, 42px); max-width: 72%; }
+.logo-plate--trio .brand-logo{ max-height: clamp(34px, 5.4vw, 48px); }
 .brand-logo.is-missing{ display: none; }
-/* until a single logo file exists, hide its plate so the art reads clean */
+/* until a single logo file exists, hide its card so the art reads clean */
 .vertical-media.logo-missing .logo-plate{ display: none; }
 
 /* ─────────── APPROACH (dark) ─────────── */
