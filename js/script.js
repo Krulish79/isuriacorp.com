@@ -121,7 +121,7 @@
       'form.company': 'Company', 'form.opt': '(optional)', 'form.message': 'Message', 'form.send': 'Send message',
       'footer.sub': 'Capitalizing investment opportunities', 'footer.place': 'Mexico City, México',
       'footer.rights': 'All rights reserved.', 'footer.made': 'Hecho en México',
-      'status.sending': 'Sending…', 'status.ok': 'Thank you — we will be in touch.', 'status.err': 'Please complete the required fields.'
+      'status.sending': 'Sending…', 'status.ok': 'Opening your email app — thank you.', 'status.err': 'Please complete the required fields.'
     },
     es: {
       'brand.caption': 'Grupo · Ciudad de México',
@@ -177,7 +177,7 @@
       'form.company': 'Empresa', 'form.opt': '(opcional)', 'form.message': 'Mensaje', 'form.send': 'Enviar mensaje',
       'footer.sub': 'Capitalizando oportunidades de inversión', 'footer.place': 'Ciudad de México, México',
       'footer.rights': 'Todos los derechos reservados.', 'footer.made': 'Hecho en México',
-      'status.sending': 'Enviando…', 'status.ok': 'Gracias — nos pondremos en contacto.', 'status.err': 'Por favor complete los campos requeridos.'
+      'status.sending': 'Enviando…', 'status.ok': 'Abriendo tu correo — gracias.', 'status.err': 'Por favor complete los campos requeridos.'
     }
   };
 
@@ -212,10 +212,11 @@
   try { saved = localStorage.getItem('isuria-lang') || 'en'; } catch (e) {}
   applyLang(saved);
 
-  /* ---------- contact form (front-end only) ---------- */
+  /* ---------- contact form → mailto (no backend needed) ---------- */
   var form = document.getElementById('contactForm');
   if (form) {
     var status = form.querySelector('.form-status');
+    var CONTACT_EMAIL = 'contact@isuriacorp.com';
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var required = form.querySelectorAll('[required]');
@@ -226,13 +227,21 @@
         status.classList.remove('is-ok');
         return;
       }
-      status.textContent = dict('status.sending');
-      status.classList.remove('is-ok');
-      setTimeout(function () {
-        status.textContent = dict('status.ok');
-        status.classList.add('is-ok');
-        form.reset();
-      }, 700);
+      var v = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
+      var subject = 'Isuria — inquiry from ' + v('first') + ' ' + v('last');
+      var lines = [
+        'Name: ' + v('first') + ' ' + v('last'),
+        'Email: ' + v('email'),
+        'Company: ' + (v('company') || '—'),
+        '',
+        v('message')
+      ];
+      var href = 'mailto:' + CONTACT_EMAIL +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(lines.join('\n'));
+      window.location.href = href;
+      status.textContent = dict('status.ok');
+      status.classList.add('is-ok');
     });
   }
 })();
