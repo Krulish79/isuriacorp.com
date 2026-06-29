@@ -371,32 +371,42 @@ em{ color: var(--red); }
   background: linear-gradient(180deg, transparent 72%, rgba(255,255,255,.08) 72.5%);
 }
 
-/* Operating-company logo on a clean white card, floated on the dark art plate —
-   so logos read in their true colours (several are black artwork). */
-.logo-plate{
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  z-index: 2;
-  width: min(72%, 300px);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: clamp(1rem, 2.6vw, 1.6rem);
-  padding: clamp(1.7rem, 4.5vw, 2.6rem);
-  background: var(--white);
-  border-radius: 2px;
-  box-shadow: 0 28px 64px -30px rgba(0,0,0,.7), 0 1px 0 rgba(0,0,0,.25);
+/* Division photo fills the media slot; the abstract art sits behind as a
+   graceful fallback until a real image is added. */
+.vertical-media{ overflow: hidden; background: var(--ink); }
+.vertical-photo{
+  position: absolute; inset: 0; z-index: 1;
+  width: 100%; height: 100%; object-fit: cover; display: block;
 }
-.logo-plate::before{ /* hairline red accent at the top edge */
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--red);
+.vertical-media.photo-missing .vertical-photo{ display: none; }
+.vertical-media .art{ position: absolute; inset: 0; z-index: 0; }
+
+/* Operating-company logo — a small mark above the heading, on the light copy
+   side (so even the all-black logos read). */
+.vertical-logo{
+  height: clamp(30px, 4vw, 42px);
+  width: auto; max-width: 60%; object-fit: contain;
+  display: block; margin: 0 0 1.3rem;
 }
-.brand-logo{
-  max-width: 100%;
-  max-height: clamp(52px, 8.5vw, 76px);
-  width: auto; height: auto; object-fit: contain; display: block;
+.vertical-logo.is-missing{ display: none; }
+.vertical-logos{ display: flex; align-items: center; flex-wrap: wrap; gap: clamp(1.2rem, 3vw, 2rem); margin: 0 0 1.4rem; }
+.vertical-logos .vertical-logo{ height: clamp(30px, 3.6vw, 40px); max-width: none; margin: 0; }
+
+/* Moronga trailer player */
+.trailer .trailer-video{ position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
+.trailer.photo-missing .trailer-video{ background: var(--ink); }
+.trailer-play{
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .9rem;
+  color: var(--white);
+  background: linear-gradient(180deg, rgba(5,5,6,.15), rgba(5,5,6,.45));
+  transition: background .35s var(--ease);
 }
-.logo-plate--trio .brand-logo{ max-height: clamp(34px, 5.4vw, 48px); }
-.brand-logo.is-missing{ display: none; }
-/* until a single logo file exists, hide its card so the art reads clean */
-.vertical-media.logo-missing .logo-plate{ display: none; }
+.trailer-play:hover{ background: linear-gradient(180deg, rgba(5,5,6,.05), rgba(5,5,6,.35)); }
+.trailer-play-ring{ color: var(--white); transition: transform .35s var(--ease), color .35s var(--ease); }
+.trailer-play:hover .trailer-play-ring{ transform: scale(1.06); color: var(--red-bright); }
+.trailer-play-label{ font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; }
+.trailer.is-playing .trailer-play{ display: none; }
 
 /* ─────────── APPROACH (dark) ─────────── */
 .approach{ background: var(--ink); color: var(--on-dark); padding: clamp(6rem, 12vw, 10rem) 0; }

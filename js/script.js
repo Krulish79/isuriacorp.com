@@ -46,6 +46,21 @@
     revealTargets.forEach(function (el) { el.classList.add('is-in'); });
   }
 
+  /* ---------- Moronga trailer ---------- */
+  var trailer = document.getElementById('morongaTrailer');
+  if (trailer) {
+    var trailerBtn = trailer.querySelector('.trailer-play');
+    var trailerVid = trailer.querySelector('.trailer-video');
+    if (trailerBtn && trailerVid) {
+      trailerBtn.addEventListener('click', function () {
+        trailer.classList.add('is-playing');
+        trailerVid.setAttribute('controls', '');
+        var p = trailerVid.play();
+        if (p && p.catch) p.catch(function () {});
+      });
+    }
+  }
+
   /* ---------- year ---------- */
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
@@ -93,7 +108,7 @@
       'agri.a3.k': 'Capacity', 'agri.a3.v': '100,000+ / month',
       'film.tag': 'Nº 05 — Film', 'film.title': 'Moronga <em>Films</em>',
       'film.body': 'Moronga Films produced <em>Moronga</em> (Black Pudding) — a surreal western and black comedy with Matt O’Leary and Kristyan Ferrer, directed by John Dickie, a Scottish-born, Mexico-bred, award-winning film-maker living in the mountains of Oaxaca.',
-      'film.a1.k': 'Studio', 'film.a2.k': 'Feature', 'film.a3.k': 'Director',
+      'film.a1.k': 'Studio', 'film.a2.k': 'Feature', 'film.a3.k': 'Director', 'film.trailer': 'Watch trailer',
       'approach.eyebrow': 'Our Approach', 'approach.title': 'How we <em>operate.</em>',
       'tenet1.k': 'Lean management', 'tenet1.v': 'A lean managerial system runs through every trading day — less structure, faster decisions.',
       'tenet2.k': 'International network', 'tenet2.v': 'A high-profile team with a solid global network and broad experience across industries.',
@@ -149,7 +164,7 @@
       'agri.a3.k': 'Capacidad', 'agri.a3.v': '100,000+ / mes',
       'film.tag': 'Nº 05 — Cine', 'film.title': 'Moronga <em>Films</em>',
       'film.body': 'Moronga Films produjo <em>Moronga</em> (Black Pudding) — un western surrealista y comedia negra con Matt O’Leary y Kristyan Ferrer, dirigida por John Dickie, un cineasta nacido en Escocia, criado en México y premiado, que vive en las montañas de Oaxaca.',
-      'film.a1.k': 'Estudio', 'film.a2.k': 'Largometraje', 'film.a3.k': 'Director',
+      'film.a1.k': 'Estudio', 'film.a2.k': 'Largometraje', 'film.a3.k': 'Director', 'film.trailer': 'Ver tráiler',
       'approach.eyebrow': 'Filosofía', 'approach.title': 'Cómo <em>operamos.</em>',
       'tenet1.k': 'Gestión esbelta', 'tenet1.v': 'Un sistema de gestión esbelto recorre cada día de operación — menos estructura, decisiones más rápidas.',
       'tenet2.k': 'Red internacional', 'tenet2.v': 'Un equipo de alto perfil con una sólida red global y amplia experiencia en distintas industrias.',

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=20260624b" />
+  <link rel="stylesheet" href="css/style.css?v=20260625a" />
 </head>
 <body>
 
@@ -103,14 +103,14 @@
       <!-- 01 OFFSHORE TECHNOLOGY -->
       <article class="vertical" id="offshore" data-accent="offshore">
         <span class="ghost-num" aria-hidden="true">01</span>
-        <div class="vertical-media has-logo">
-          <div class="art art--offshore"></div>
-          <div class="logo-plate">
-            <img class="brand-logo" src="images/logos/sigrico.png" alt="SigriCo" loading="lazy"
-                 onerror="this.closest('.vertical-media').classList.add('logo-missing')" />
-          </div>
+        <div class="vertical-media">
+          <img class="vertical-photo" src="images/divisions/offshore.jpg" alt="SigriCo — offshore aquaculture" loading="lazy"
+               onerror="this.closest('.vertical-media').classList.add('photo-missing')" />
+          <div class="art art--offshore" aria-hidden="true"></div>
         </div>
         <div class="vertical-copy">
+          <img class="vertical-logo" src="images/logos/sigrico.png" alt="SigriCo" loading="lazy"
+               onerror="this.classList.add('is-missing')" />
           <p class="vertical-tag" data-i18n="offshore.tag">Nº 01 — Offshore Technology</p>
           <h3 class="display-xs" data-i18n-html="offshore.title">SigriCo <em>Aquaculture</em></h3>
           <p data-i18n="offshore.body">Through SigriCo — a Mexican company built by a multidisciplinary, internationally experienced team — we invest in offshore aquaculture on a global scale, farming Seriola in open water. The aim is a true bioeconomy: sustainability and productivity held together, never traded against each other.</p>
@@ -125,14 +125,14 @@
       <!-- 02 OIL & GAS TRADING -->
       <article class="vertical reverse" id="energy" data-accent="energy">
         <span class="ghost-num" aria-hidden="true">02</span>
-        <div class="vertical-media has-logo">
-          <div class="art art--energy"></div>
-          <div class="logo-plate">
-            <img class="brand-logo" src="images/logos/rozoil.png" alt="ROZOIL" loading="lazy"
-                 onerror="this.closest('.vertical-media').classList.add('logo-missing')" />
-          </div>
+        <div class="vertical-media">
+          <img class="vertical-photo" src="images/divisions/energy.jpg" alt="ROZOIL — energy & lubricants" loading="lazy"
+               onerror="this.closest('.vertical-media').classList.add('photo-missing')" />
+          <div class="art art--energy" aria-hidden="true"></div>
         </div>
         <div class="vertical-copy">
+          <img class="vertical-logo" src="images/logos/rozoil.png" alt="ROZOIL" loading="lazy"
+               onerror="this.classList.add('is-missing')" />
           <p class="vertical-tag" data-i18n="energy.tag">Nº 02 — Oil &amp; Gas Trading</p>
           <h3 class="display-xs" data-i18n-html="energy.title">ROZOIL <em>Energy</em></h3>
           <p data-i18n="energy.body">ROZOIL is our registered energy and lubricants brand, with offices in Houston, Texas and Mexico City. A management team with more than thirty years in the sector pairs top-tier technology with a proprietary formula engineered for low friction and long-lasting performance.</p>
@@ -147,18 +147,20 @@
       <!-- 03 SPIRITS -->
       <article class="vertical" id="spirits" data-accent="spirits">
         <span class="ghost-num" aria-hidden="true">03</span>
-        <div class="vertical-media has-logo">
-          <div class="art art--spirits"></div>
-          <div class="logo-plate logo-plate--trio">
-            <img class="brand-logo" src="images/logos/tres-ese.png" alt="Tequila Tres Ese" loading="lazy"
-                 onerror="this.classList.add('is-missing')" />
-            <img class="brand-logo" src="images/logos/machetazo.png" alt="Mezcal Machetazo" loading="lazy"
-                 onerror="this.classList.add('is-missing')" />
-            <img class="brand-logo" src="images/logos/mayalen.png" alt="Mezcal Mayalén" loading="lazy"
-                 onerror="this.classList.add('is-missing')" />
-          </div>
+        <div class="vertical-media">
+          <img class="vertical-photo" src="images/divisions/spirits.jpg" alt="Distilled spirits — agave houses" loading="lazy"
+               onerror="this.closest('.vertical-media').classList.add('photo-missing')" />
+          <div class="art art--spirits" aria-hidden="true"></div>
         </div>
         <div class="vertical-copy">
+          <div class="vertical-logos" aria-label="Houses">
+            <img class="vertical-logo" src="images/logos/tres-ese.png" alt="Tequila Tres Ese" loading="lazy"
+                 onerror="this.classList.add('is-missing')" />
+            <img class="vertical-logo" src="images/logos/machetazo.png" alt="Mezcal Machetazo" loading="lazy"
+                 onerror="this.classList.add('is-missing')" />
+            <img class="vertical-logo" src="images/logos/mayalen.png" alt="Mezcal Mayalén" loading="lazy"
+                 onerror="this.classList.add('is-missing')" />
+          </div>
           <p class="vertical-tag" data-i18n="spirits.tag">Nº 03 — Spirits</p>
           <h3 class="display-xs" data-i18n-html="spirits.title">Distilled <em>Spirits</em></h3>
           <p data-i18n="spirits.body">A portfolio of agave houses made the slow way. Tequila Tres Ese from the red highlands of Jalisco; Mezcal Machetazo across Guerrero, Oaxaca and San Luis Potosí; and Mezcal Mayalén — 100% wild-agave and artisanal, from a palenque active since 1949 in the mountains of Guerrero.</p>
@@ -176,8 +178,10 @@
       <!-- 04 AGRICULTURE -->
       <article class="vertical reverse" id="agriculture" data-accent="agri">
         <span class="ghost-num" aria-hidden="true">04</span>
-        <div class="vertical-media" aria-hidden="true">
-          <div class="art art--agri"></div>
+        <div class="vertical-media">
+          <img class="vertical-photo" src="images/divisions/agriculture.jpg" alt="Coconut plantations — Guerrero" loading="lazy"
+               onerror="this.closest('.vertical-media').classList.add('photo-missing')" />
+          <div class="art art--agri" aria-hidden="true"></div>
         </div>
         <div class="vertical-copy">
           <p class="vertical-tag" data-i18n="agri.tag">Nº 04 — Agriculture</p>
@@ -194,17 +198,25 @@
       <!-- 05 FILM -->
       <article class="vertical" id="film" data-accent="film">
         <span class="ghost-num" aria-hidden="true">05</span>
-        <div class="vertical-media has-logo">
-          <div class="art art--film"></div>
-          <div class="logo-plate">
-            <img class="brand-logo" src="images/logos/moronga.png" alt="Moronga Films" loading="lazy"
-                 onerror="this.closest('.vertical-media').classList.add('logo-missing')" />
-          </div>
+        <div class="vertical-media trailer" id="morongaTrailer">
+          <video class="trailer-video" preload="none" playsinline
+                 poster="images/divisions/moronga-poster.jpg">
+            <source src="videos/moronga-trailer.mp4" type="video/mp4" />
+          </video>
+          <div class="art art--film" aria-hidden="true"></div>
+          <button class="trailer-play" type="button" aria-label="Play the Moronga trailer">
+            <span class="trailer-play-ring" aria-hidden="true">
+              <svg viewBox="0 0 72 72" width="72" height="72"><circle cx="36" cy="36" r="35" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/><circle cx="36" cy="36" r="27" fill="currentColor" opacity=".14"/><path d="M29 24 L52 36 L29 48 Z" fill="currentColor"/></svg>
+            </span>
+            <span class="trailer-play-label" data-i18n="film.trailer">Watch trailer</span>
+          </button>
         </div>
         <div class="vertical-copy">
+          <img class="vertical-logo" src="images/logos/moronga.png" alt="Moronga Films" loading="lazy"
+               onerror="this.classList.add('is-missing')" />
           <p class="vertical-tag" data-i18n="film.tag">Nº 05 — Film</p>
           <h3 class="display-xs" data-i18n-html="film.title">Moronga <em>Films</em></h3>
-          <p data-i18n="film.body">Moronga Films produced <em>Moronga</em> (Black Pudding) — a surreal western and black comedy with Matt O'Leary and Kristyan Ferrer, directed by John Dickie, a Scottish-born, Mexico-bred, award-winning film-maker living in the mountains of Oaxaca.</p>
+          <p data-i18n-html="film.body">Moronga Films produced <em>Moronga</em> (Black Pudding) — a surreal western and black comedy with Matt O'Leary and Kristyan Ferrer, directed by John Dickie, a Scottish-born, Mexico-bred, award-winning film-maker living in the mountains of Oaxaca.</p>
           <ul class="attr">
             <li><span data-i18n="film.a1.k">Studio</span><strong>Moronga Films</strong></li>
             <li><span data-i18n="film.a2.k">Feature</span><strong>“Moronga”</strong></li>
@@ -333,6 +345,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=20260624b" defer></script>
+  <script src="js/script.js?v=20260625a" defer></script>
 </body>
 </html>
