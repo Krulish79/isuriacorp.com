@@ -167,9 +167,7 @@ em{ color: var(--red); }
 }
 .header-inner{ display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 
-.brand{ display: flex; align-items: center; gap: .65rem; line-height: 1; }
-.brand-badge{ height: 40px; width: auto; flex: none; display: block; }
-.brand-text{ display: grid; row-gap: .35rem; }
+.brand{ display: grid; row-gap: .35rem; line-height: 1; }
 .brand-mark{
   font-family: var(--sans);
   font-weight: 500;
@@ -246,6 +244,7 @@ em{ color: var(--red); }
   margin: 0 0 2rem;
 }
 .hero-eyebrow::before{ content:""; width: 30px; height: 1px; background: var(--red); }
+.hero-badge{ display: block; height: 80px; width: auto; margin: 0 0 1.8rem; }
 .hero .display{ color: var(--on-dark); }
 .hero .display .italic{ color: var(--red-bright); }
 .hero .lede{ color: var(--on-dark-soft); margin: 2rem 0 0; }
