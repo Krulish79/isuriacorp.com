@@ -304,7 +304,10 @@ em{ color: var(--red); }
   font-family: var(--serif); font-size: clamp(7rem, 18vw, 15rem); line-height: 1;
   color: var(--paper-2); z-index: 0; pointer-events: none; letter-spacing: -.04em;
 }
-.vertical.reverse .ghost-num{ right: auto; left: 0; }
+/* On reverse rows the copy is the LEFT column; anchor the numeral to that
+   column's inner (right) edge so it lands beside the heading like Nº 01,
+   never on top of it. */
+.vertical.reverse .ghost-num{ right: calc(50% + clamp(1rem, 3vw, 2.75rem)); left: auto; }
 .vertical-copy, .vertical-media{ position: relative; z-index: 1; }
 .vertical-tag{
   font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--red);
