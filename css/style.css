@@ -384,6 +384,11 @@ em{ color: var(--red); }
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
 .vertical-media.photo-missing .vertical-photo{ display: none; }
+/* Product shot on a white background (e.g. ROZOIL bottles on white) —
+   show the whole image, contained, instead of cover-cropping on the dark panel. */
+.vertical-media--product{ background: #fff; }
+.vertical-media--product .art{ display: none; }
+.vertical-media--product .vertical-photo{ object-fit: contain; padding: clamp(1.6rem, 4vw, 3rem); }
 .vertical-media .art{ position: absolute; inset: 0; z-index: 0; }
 
 /* Operating-company logo — a small mark above the heading, on the light copy
@@ -435,6 +440,8 @@ em{ color: var(--red); }
 .house-logo{ height: clamp(30px, 3.6vw, 42px); width: auto; max-width: 200px; object-fit: contain; display: block; }
 .house-logo.is-missing{ display: none; }
 .house-note{ font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.btn-sm{ padding: .6rem 1.1rem; font-size: .72rem; }
+.house-link{ margin-left: auto; }
 
 .bottle-shelf{
   display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center;
