@@ -99,6 +99,9 @@ header, section, footer{ position: relative; z-index: 2; }
 .display-xs{ font-size: clamp(1.55rem, 2.7vw, 2.4rem); line-height: 1.12; }
 .italic, em{ font-style: italic; }
 em{ color: var(--red); }
+/* Per-division accent overrides on the italic heading word */
+#offshore .display-xs em{ color: #16A4B0; }  /* SigriCo logo teal */
+#tequila  .display-xs em{ color: #8B5E3C; }  /* medium brown (Tres Ese) */
 .nowrap{ white-space: nowrap; }
 
 .eyebrow{
