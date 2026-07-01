@@ -244,7 +244,7 @@ em{ color: var(--red); }
   margin: 0 0 2rem;
 }
 .hero-eyebrow::before{ content:""; width: 30px; height: 1px; background: var(--red); }
-.hero-badge{ display: block; height: 80px; width: auto; margin: 0 0 1.8rem; }
+.hero-badge{ display: block; height: 104px; width: auto; margin: 0 0 1.8rem; }
 .hero .display{ color: var(--on-dark); }
 .hero .display .italic{ color: var(--red-bright); }
 .hero .lede{ color: var(--on-dark-soft); margin: 2rem 0 0; }
