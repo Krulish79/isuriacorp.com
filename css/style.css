@@ -462,15 +462,20 @@ em{ color: var(--red); }
   height: clamp(190px, 26vw, 300px);
   width: auto; display: block; margin: 0 auto;
 }
-.bottle-shelf--seven .bottle img{ height: clamp(208px, 19.5vw, 312px); }
+/* Mayalén: keep all 7 bottles on a single row — equal columns that scale to fit */
+.bottle-shelf--seven{ flex-wrap: nowrap; gap: clamp(.3rem, 1.2vw, 1.4rem); }
+.bottle-shelf--seven .bottle{ flex: 1 1 0; min-width: 0; }
+.bottle-shelf--seven .bottle img{
+  height: auto; width: auto; max-width: 100%; max-height: clamp(180px, 23vw, 320px); margin: 0 auto;
+}
+.bottle-shelf--seven .bottle figcaption{ white-space: normal; font-size: .6rem; letter-spacing: .1em; }
 .bottle figcaption{
   margin-top: .9rem; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
 }
 
 @media (max-width: 680px){
-  .bottle img,
-  .bottle-shelf--seven .bottle img{ height: clamp(150px, 38vw, 210px); }
-  .bottle-shelf{ gap: 1.4rem 1.6rem; }
+  .bottle img{ height: clamp(150px, 38vw, 210px); }
+  .bottle-shelf:not(.bottle-shelf--seven){ gap: 1.4rem 1.6rem; }
 }
 
 /* ─────────── APPROACH (dark) ─────────── */
