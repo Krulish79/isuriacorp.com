@@ -453,7 +453,7 @@ em{ color: var(--red); }
 .house-link{ margin-left: auto; }
 
 .bottle-shelf{
-  display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center;
+  display: flex; flex-wrap: nowrap; align-items: flex-end; justify-content: center;
   gap: clamp(1.2rem, 3.5vw, 3rem);
   padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 2vw, 2rem) clamp(1.5rem, 3vw, 2.2rem);
   background: #fff;            /* white so the Machetazo (white-bg) shots blend */
@@ -463,6 +463,11 @@ em{ color: var(--red); }
 .bottle img{
   height: clamp(190px, 26vw, 300px);
   width: auto; display: block; margin: 0 auto;
+}
+/* 3-bottle shelves (Tequila, Machetazo): fit one row, scale to fill the space */
+.bottle-shelf:not(.bottle-shelf--seven) .bottle{ flex: 1 1 0; min-width: 0; }
+.bottle-shelf:not(.bottle-shelf--seven) .bottle img{
+  height: auto; width: auto; max-width: 100%; max-height: clamp(240px, 40vw, 450px);
 }
 /* Mayalén: keep all 7 bottles on a single row — equal columns that scale to fit */
 .bottle-shelf--seven{ flex-wrap: nowrap; gap: clamp(.3rem, 1.2vw, 1.4rem); }
