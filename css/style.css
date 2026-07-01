@@ -390,7 +390,7 @@ em{ color: var(--red); }
    show the whole image, contained, instead of cover-cropping on the dark panel. */
 .vertical-media--product{ background: #fff; }
 .vertical-media--product .art{ display: none; }
-.vertical-media--product .vertical-photo{ object-fit: contain; padding: clamp(1.6rem, 4vw, 3rem); }
+.vertical-media--product .vertical-photo{ object-fit: contain; padding: clamp(.5rem, 1.5vw, 1rem); }
 .vertical-media .art{ position: absolute; inset: 0; z-index: 0; }
 
 /* Operating-company logo — a small mark above the heading, on the light copy
