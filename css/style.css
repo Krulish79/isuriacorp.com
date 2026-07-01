@@ -241,10 +241,10 @@ em{ color: var(--red); }
   font-size: .74rem; font-weight: 500; letter-spacing: .26em; text-transform: uppercase;
   color: var(--on-dark-soft);
   display: inline-flex; align-items: center; gap: .85rem;
-  margin: 0 0 .7rem;
+  margin: 0 0 .6rem;
 }
 .hero-eyebrow::before{ content:""; width: 30px; height: 1px; background: var(--red); }
-.hero-badge{ display: block; height: 104px; width: auto; margin: 0 0 .5rem; }
+.hero-badge{ display: block; height: 104px; width: auto; margin: 0 0 .6rem; }
 .hero .display{ color: var(--on-dark); }
 .hero .display .italic{ color: var(--red-bright); }
 .hero .lede{ color: var(--on-dark-soft); margin: 2rem 0 0; }
