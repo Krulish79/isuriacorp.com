@@ -100,8 +100,9 @@ header, section, footer{ position: relative; z-index: 2; }
 .italic, em{ font-style: italic; }
 em{ color: var(--red); }
 /* Per-division accent overrides on the italic heading word */
-#offshore .display-xs em{ color: #16A4B0; }  /* SigriCo logo teal */
-#tequila  .display-xs em{ color: #8B5E3C; }  /* medium brown (Tres Ese) */
+#offshore    .display-xs em{ color: #16A4B0; }  /* SigriCo logo teal */
+#tequila     .display-xs em{ color: #8B5E3C; }  /* medium brown (Tres Ese) */
+#agriculture .display-xs em{ color: #8A9A2E; }  /* coconut green-yellow (Land) */
 .nowrap{ white-space: nowrap; }
 
 .eyebrow{
